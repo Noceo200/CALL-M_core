@@ -1,4 +1,4 @@
-laserscan_toolbox_node:
+{{namespace}}/laserscan_toolbox_node:
   ros__parameters:
     #common
     rate: 40.0 #hz

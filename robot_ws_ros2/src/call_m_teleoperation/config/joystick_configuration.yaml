@@ -1,4 +1,4 @@
-joystick_control_node:
+{{namespace}}/joystick_control_node:
   ros__parameters:
     #check gamepad inputs with another program to configure this file
 

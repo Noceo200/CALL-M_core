@@ -1,4 +1,4 @@
-depth_filter_scan_converter_node:
+{{namespace}}/depth_filter_scan_converter_node2:
   ros__parameters:
     #node settings
     rate: 10.0 #hz, better if equal or inferior to depth sensor publishing speed

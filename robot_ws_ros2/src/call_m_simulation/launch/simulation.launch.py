@@ -38,22 +38,6 @@ def generate_launch_description():
                                 '-entity', 'call_m_bot'],
                     output='screen')
 
-    #ros_control controllers, defined in controllers.yaml
-    node_controller_wheels = launch.actions.ExecuteProcess(
-        cmd=['ros2', 'run', 'controller_manager', 'spawner', 'wheels_cont'],
-        output='screen',
-    )
-
-    node_controller_wheels_sup = launch.actions.ExecuteProcess(
-        cmd=['ros2', 'run', 'controller_manager', 'spawner', 'wheels_sup_cont'],
-        output='screen',
-    )
-
-    node_controller_cams = launch.actions.ExecuteProcess(
-        cmd=['ros2', 'run', 'controller_manager', 'spawner', 'cams_cont'],
-        output='screen',
-    )
-
     #simulated bot driver
     node_simu_bot_driver = launch.actions.ExecuteProcess(
         #cmd=['ros2', 'run', 'call_m_simulation', 'simu_bot_driver_node'],
@@ -109,9 +93,6 @@ def generate_launch_description():
         spawn_entity,
         node_simu_odometry,
         robot_localization_node,
-        #node_controller_wheels,
-        #node_controller_wheels_sup,
-        #node_controller_cams,
         node_simu_bot_driver,
         delayed_controller_manager_spawner,
     ])
